@@ -1,0 +1,612 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  width: 0; 
+}
+
+body {
+  font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.signup {
+  background-color: black;
+  
+  color: white;
+  padding: 10px;
+}
+.signup-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#x {
+  margin-left: 30px;
+  cursor: pointer;
+}
+.signup.fade-out {
+  opacity: 0; /* Fade out */
+}
+.navbar
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  background-color: white;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.navbar-left
+{
+  display: flex;
+  gap:50px;
+}
+.navbar-menu-toggle
+{
+  display: none;
+}
+@media screen and (max-width:900px) {
+
+  .navbar-menu-toggle {
+      display: block;
+      margin-right: 10px;
+  }
+
+  
+   
+
+  .navbar-left
+  {
+    display: none;
+  }
+}
+  .side-navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #1D232C;
+    color: #E2E1E1;
+    margin-left: -60%;
+    transition-duration: 1s;
+    z-index: 30;
+    padding: 20px;
+  
+}
+
+.side-navbar-link{
+    margin-bottom: 30px;
+}
+
+.side-navbar-links a{
+    text-decoration: none;
+    color: #E2E1E1;
+}
+
+.side-navbar-links a:hover{
+    text-decoration: underline;
+    color: #E2E1E1;
+}
+
+.side-navbar-search {
+  border: solid #E2E1E1 1px;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.side-navbar-search input {
+  border: none;
+  background: transparent;
+}
+
+  
+
+
+/*Slider*/
+
+.slider{
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  position: relative;
+  
+  border-radius: 5px;
+
+}
+
+.slider-image-container{
+  display: flex;
+  transition: 2s;
+}
+
+.slider-image{
+  width: 100vw;
+  height: 50vw;
+}
+
+.slider-left-button{
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  z-index: 1;
+}
+
+.slider-left-button i{
+  font-size: 10vw;
+  
+}
+.slider-right-button{
+  position: absolute;
+  top: 35%;
+  right: 5%;
+}
+.slider-right-button i{
+  font-size: 10vw;
+}
+.slider-content{
+  position: absolute;
+  color: white;
+  text-align: center;
+   width: 100%;
+   top: 35%;
+}
+.slider-content h1{
+  font-size: 5vw;
+}
+.slider-content button{
+ padding: 10px;
+ margin-top: 20px;
+ color: #1D232C;
+}
+
+@media screen and (max-width:800px) {
+  .slider-content button{
+    padding: 5px;
+  }
+}
+
+
+
+.product-img {
+  width: 100vw; /* Full viewport width */
+  height: auto; /* Full viewport height */
+  max-height: 90vh;
+  margin: 2px; /* Space between images */
+  object-fit: cover;
+  transition: transform 0.2s; /* Optional: add a hover effect */
+}
+
+.product-img:hover {
+  transform: scale(1.05); /* Optional: scale image on hover */
+}
+
+
+.navbar-left a {
+ 
+  cursor: pointer;
+  text-decoration: none;
+  color: grey;
+}
+.navbar-left a:hover
+{
+  text-decoration: underline;
+}
+.brand-heading
+{
+  padding: 10px;
+ 
+}
+.brands
+{
+  padding: 5px;
+display: flex;
+width:100%;
+justify-content: space-around;
+
+}
+.brands img{
+  width: 60px;
+  cursor: pointer;
+
+}
+@media screen and (max-width:800px) {
+  .brands img{
+  width: 8vw;
+  }
+  .brands
+  {
+    width: 90%;
+   padding: 5px;
+   
+  }
+}
+
+.customer-experience
+{
+ padding: 10px;
+ margin-top: 30px;
+ 
+}
+
+.review-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  gap:20px;
+  margin-top: 30px;
+ 
+}
+.review-container img{
+  width:50px;
+}
+
+
+.review-1{
+  border:  solid gray 2px;
+  background-color: grey;
+  padding: 10px;
+  flex-basis: 20%;
+ 
+}
+
+@media screen and (max-width:800px) {
+  body{
+      font-size: 10px;
+  }
+  .review-1
+  {
+    flex-basis: 40%;
+  }
+  .review-container img{
+    width:40px;
+  }
+  
+
+}
+
+
+
+  
+.new-arrival{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vw;
+ 
+  
+}
+
+.new-arrival-container{
+ position: relative;
+ 
+  
+}
+
+.new-arrival-container img{
+  border-radius: 2%;
+  
+   
+}
+
+
+.overlay{
+  border-radius: 2%;
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  background-color: black;
+  z-index: 2;
+  top: 0;
+  opacity: 0.6;
+}
+
+
+
+.new-arrival button{
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-top: 10px;
+  font-size: 1.2vw;
+  color: #1D232C;
+  border-radius: 10px;
+  position: absolute;
+  border: none;
+  top: 50%;
+  left: 23%;
+  z-index: 2;
+  
+
+}
+ /* Scroll Animate */
+
+ .initial-scroll-animate{
+   
+  transition: 3s;
+  padding: 5px;
+}
+
+
+
+.most-wanted-container{
+  position: relative; 
+ 
+}
+
+.most-wanted img{
+   border-radius: 2%;
+   
+   
+    
+}
+.most-wanted
+{
+  display: flex;
+  gap:20px;
+  overflow-x: auto;
+  margin-top: 2vw;
+}
+
+.sale-overlay{
+   position: absolute;
+   top:3px;
+   left: 3px;
+   font-size: 2vw;
+   background-color: red;
+   color: white;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 10%;
+}
+
+
+
+
+
+
+.most-wanted::-webkit-scrollbar {
+  appearance: none;
+  height: 8px;
+  
+}
+.limited-offers
+{
+  background-color: #1D232C;
+  color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap:80px;
+  margin-top: 4vw;
+
+}
+.limited-offers-img img
+{
+  width:37vw;
+  border-radius: 10px;
+  padding: 10px;
+}
+.limited-offers-text
+{
+  font-size: 2vw;
+}
+.limited-offers button{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  margin-top: 10px;
+  font-size: 1.2vw;
+  color: #1D232C;
+  border-radius: 10px;
+  border: none;
+  
+  
+
+}
+.news 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.9vw;
+    margin-top: 5vw;
+}
+.news input{
+    padding: 11px;
+    width: 70vw;
+    margin-bottom: 10px;
+    border: solid #1D232C 3px;
+
+}
+
+.news input:focus{
+   outline: none;
+
+}
+
+.news button{
+    
+    margin-top: 10px;
+    font-size: 1.8vw;
+    color: #E2E1E1;
+    background-color: #1D232C;
+    border-radius: 10px;
+    border: none;
+    padding:10px
+    
+    
+
+ }
+ .footer{
+  font-size: 1.5vw;
+  margin-top: 5vw;
+  padding: 40px;
+  background-color: #1D232C;
+  color: #E2E1E1;
+ 
+}
+
+.footer-container{
+ 
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-icon-container
+{
+  display: flex;
+  align-items: center;
+  gap:40px;
+  margin-top: 2vw;
+}
+
+.footer-box-1{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer-box-2{
+  display: flex;
+}
+.para
+{
+  margin-top: 2vw;
+}
+.subtitle
+{
+  margin-top: 2vw;
+}
+
+.search{
+  padding: 10px;
+  border: solid black 1px;
+  border-radius: 30px;
+  width:60%;
+  /*As of input width is 100%  the search bar and text comes in two different lines ..so to align on same row we using flex*/
+  display: flex;
+  gap: 10px;
+  align-items: center;
+ margin-left: 12vw;
+ margin-top: 2vw;
+ justify-content: space-between;
+  
+  
+}
+.search input{
+  border: none;
+  width:90%;
+  font-size:15px;
+  /* while using poosition sticky the input box have the white color bckgrund*/
+  background-color: transparent;
+}
+.search input:focus{
+  outline:none;
+}
+
+.collection img{
+  width: 60%;/* Full width of grid item */
+   /* Maintain aspect ratio */
+  border-radius: 5px;
+  margin: 0 auto;
+}
+.collection-container
+{
+  gap: 10px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2vw;
+ 
+}
+.collection
+{
+  text-align: center;
+  flex-basis: 20%;
+  
+ 
+ 
+}
+@media screen and (max-width:800px) {
+  .collection
+  {
+    flex-basis: 22%;
+    
+  }
+  .collection img{
+    width: 100%;
+}
+}
+
+
+
+.contact-form {
+  background-color: palevioletred;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 60vw;
+  margin: auto;
+  padding: 5vw;
+  padding-right: 10vw;
+  margin-top: 10px;
+}
+
+.contact-form h2 {
+  margin-bottom: 1vw;
+  text-align: center;
+ 
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 1vw;
+
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  padding: 2vw;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  margin-bottom: 1vw;
+  font-size: 1vw;
+  
+}
+
+.contact-form textarea {
+  resize: vertical;
+  height: 10vh;
+}
+
+.contact-form input[type="submit"] {
+  
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #b30080;
+}
+
+.contact-form input[type="submit"]:hover
+ {
+  background-color:rgb(255, 47, 182);
+}
+
